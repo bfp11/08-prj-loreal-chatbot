@@ -2,8 +2,7 @@ const chatForm = document.getElementById("chatForm");
 const userInput = document.getElementById("userInput");
 const chatWindow = document.getElementById("chatWindow");
 
-const CLOUDLARE_WORKER_URL = 'https://your-cloudflare-worker-name.your-subdomain.workers.dev'; // replace with your Cloudflare URL
-
+const CLOUDLARE_WORKER_URL = 'https://loral-woker.eathen618.workers.dev/'
 const messages = [
   {
     role: "system",
