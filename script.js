@@ -2,7 +2,7 @@ const chatForm = document.getElementById("chatForm");
 const userInput = document.getElementById("userInput");
 const chatWindow = document.getElementById("chatWindow");
 
-const CLOUDLARE_WORKER_URL = 'https://loral-woker.eathen618.workers.dev/'
+const CLOUDFLARE_WORKER_URL = 'https://loral-woker.eathen618.workers.dev/';
 const messages = [
   {
     role: "system",
@@ -26,7 +26,7 @@ chatForm.addEventListener("submit", async (e) => {
   messages.push({ role: "user", content: input });
 
   try {
-    const response = await fetch(CLOUDLARE_WORKER_URL, {
+    const response = await fetch(CLOUDFLARE_WORKER_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
