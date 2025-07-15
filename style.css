@@ -1,89 +1,91 @@
-/* —— base reset —— */
+/* —— Reset —— */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* —— body and page wrapper —— */
+/* —— Page Body —— */
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
-  background: #f3f3f3;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  color: #222;
+  background-color: #fff;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  padding: 30px;
 }
 
 .page-wrapper {
-  width: 90%;
-  max-width: 900px;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
-/* —— header —— */
+/* —— Header —— */
 .site-header {
   text-align: center;
-  padding: 40px 0 20px;
+  background-color: #000;
+  padding: 40px 20px;
+  color: #fff;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   letter-spacing: 1px;
-  color: #000;
+  text-transform: uppercase;
 }
 
-/* —— chatbox —— */
+/* —— Chat Area —— */
 .chatbox {
-  margin: 30px 0;
+  padding: 30px 20px;
 }
 
 .chat-window {
   height: 360px;
-  border: 1px solid #e1e1e1;
-  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
   overflow-y: auto;
-  background: #fff;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
-/* —— chat messages —— */
+/* —— Messages —— */
 .msg {
-  max-width: 75%;
-  padding: 12px 16px;
-  border-radius: 18px;
+  max-width: 70%;
+  padding: 14px 20px;
   font-size: 16px;
+  border-radius: 20px;
   line-height: 1.5;
   white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 .msg.user {
   align-self: flex-end;
   background-color: #000;
-  color: white;
-  border-bottom-right-radius: 4px;
+  color: #fff;
+  border-bottom-right-radius: 6px;
 }
 
 .msg.ai {
   align-self: flex-start;
-  background-color: #f1f1f1;
+  background-color: #f0f0f0;
   color: #333;
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 6px;
 }
 
-/* —— chat form —— */
+/* —— Chat Form —— */
 .chat-form {
   display: flex;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .chat-form input {
@@ -91,7 +93,7 @@ body {
   padding: 14px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .chat-form input:focus {
@@ -99,46 +101,54 @@ body {
 }
 
 .chat-form button {
-  background: #000;
+  background-color: #000;
   color: #fff;
   border: none;
-  padding: 12px;
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
 .chat-form button:hover {
-  background: #666;
+  background-color: #333;
 }
 
-/* —— footer —— */
+/* —— Footer —— */
 .site-footer {
-  margin-top: 60px;
+  background-color: #f8f8f8;
   text-align: center;
+  padding: 24px 12px;
   font-size: 14px;
-  color: #666;
+  color: #999;
+  border-top: 1px solid #eee;
 }
 
-.site-footer nav a {
+.site-footer nav {
+  margin-top: 10px;
+}
+
+.site-footer a {
+  color: #000;
   margin: 0 8px;
   text-decoration: none;
-  color: #000;
 }
 
-.site-footer nav a:hover {
-  color: #666;
+.site-footer a:hover {
+  color: #777;
 }
 
-/* —— visually hidden —— */
+/* —— Accessibility —— */
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
